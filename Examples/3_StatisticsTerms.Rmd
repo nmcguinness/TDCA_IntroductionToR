@@ -1,0 +1,195 @@
+---
+title: "Terminology in Statistics"
+author: "Niall McGuinness"
+date: "2022-11-30"
+output:
+  html_document:
+    toc: TRUE
+    number_sections: FALSE
+    toc_float: TRUE
+    df_print: paged
+    fig_caption: TRUE
+    code_folding: hide
+    theme: cerulean
+  pdf_document:
+    toc: TRUE
+  word_document:
+    toc: TRUE
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Useful Links
+
+* [Color in R](https://www.programiz.com/r/colors#:~:text=We%20define%20a%20color%20as,and%20%23000000%20would%20be%20black.)
+* [R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/)
+* [R Markdown Cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)
+* [R Markdown Theme Gallery](https://www.datadreaming.org/post/r-markdown-theme-gallery/)
+* [An overview of color names in R](https://r-graph-gall
+   ery.com/42-colors-names.html)
+* [Top 7 Packages for Making Beautiful Tables in R](https://towardsdatascience.com/top-7-packages-for-making-beautiful-tables-in-r-7683d054e541)
+* [Beautiful tables in R with gtExtras](https://themockup.blog/posts/2022-06-13-gtextras-cran/)
+* [Understanding YAML headers](https://zsmith27.github.io/rmarkdown_crash-course/lesson-4-yaml-headers.html)
+* [Setting up your R markdown YAML Header](https://zsmith27.github.io/rmarkdown_crash-course/lesson-4-yaml-headers.html)
+
+# What is markdown?
+
+## How can we add headings?
+
+## How can we add subheadings?
+
+This is in **bold**. This is some *words* in italic.
+
+This is a bulleted list:
+* Player - data
+* Customer - data
+
+This is a numbered list:
+1. Something
+2. Something else
+
+Can we add a link to the [Dkit]("www.dkit.ie")?
+
+How should we add a table?
+
+Table Header | Second Header
+------------- | -------------
+Table Cell | Cell 2
+Cell 3 | Cell 4 
+
+# What are the key terms in statistics?
+
+## What types of variables exist in a game-related survey?
+
+* Name - character - "John"
+* Gender - character - m/f/o/u
+* Age - integer - 45, 32
+* Satisfied - integer - 1->5, unsatisfied/satisfied
+* Time - float-point - 2.25hrs
+* Price - float-point - 2.25hrs
+
+### Define categories for the examples above
+
+* Numerical - continuous, discrete e.g. height, age
+* Categorical - nominal (name) e.g. "brown", "male", "satisfied"
+
+## What is a statistic? 
+
+* If we derive a value/variable from a sample we call it a statistic
+e.g. average age of a 100 people then we have a **sample statistic**.
+
+* If we derive a value/variable from the population we call it a parameter
+e.g. census gives us average age of the population then we have a **population parameter**.
+
+statistics -> samples
+parameters -> population
+
+### What is an example of a statistic?
+
+```{r echo=FALSE}
+# answer in range 1-5
+satisfaction_data <- c(3.2,2,5.1,1,4,5.0,3,2.2,1,4,5.1,1,2.8,3.3,1)
+satisfaction_data
+
+# mean or average
+avg_satisfaction <- mean(satisfaction_data)
+avg_satisfaction
+
+# min or max
+min_satisfaction <- min(satisfaction_data)
+min_satisfaction
+
+# mode
+# mode_satisfaction <- mode(satisfaction_data)
+# mode_satisfaction
+
+# median (we sort the numbers and we get the centre number)
+simpler_data <- c(1,2,3,4,5,6)
+
+median_satisfaction <- median(simpler_data)
+median_satisfaction
+```
+
+This average of the data is `r round(avg_satisfaction, 2)` satisfaction points.
+
+
+## What can we plot with R Studio?
+
+Well, we can generate plots really quickly from CSV file, or from remote RBDMS data, or from CSV file on web page.
+
+### Histogram
+
+```{r echo=FALSE}
+hist(satisfaction_data,
+     main = "This is the title",
+     xlab = "Satisfaction",
+     ylab = "# Satisfied",
+     col = rgb(1, 1, 0))
+```
+
+### Barplot
+
+```{r}
+gamer_survey_data <- read.csv("amalgamated_game_survey_250_2022.csv")
+barplot(sort(table(gamer_survey_data$gender), decreasing = FALSE),
+        main = "My title",
+        xlab = "Breakdown of Age by Gender",
+        ylab = "User Number",
+        ylim = c(0, 100),
+        col=c("red", "coral", "blue", "yellow"))
+
+```
+
+
+### Boxplot
+One box plot...
+```{r}
+boxplot(gamer_survey_data$age, main = "My boxplot title")
+```
+
+Multiple box plots...
+```{r}
+boxplot(gamer_survey_data$age~gamer_survey_data$gender, main = "My multi-boxplot title")
+```
+
+## Can we make tables of our data?
+
+```{r}
+# show a "prettier" paged table
+rmarkdown::paged_table(gamer_survey_data)
+
+# show a "prettier" paged table but ONLY first 8 rows
+head_data <- head(gamer_survey_data, 8)
+rmarkdown::paged_table(head_data)
+
+# show a "prettier" paged table using kable() with caption and decimal digit max length and alignment = centre
+knitr::kable(gamer_survey_data,
+  align = c('r'), # a vector with 'c', 'l', or 'r' values
+  digits = 2,
+  caption = "A caption for your table here")
+```
+## Can we make a subset of the data to show in a table?
+
+## Can we filter the data to show in a table?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

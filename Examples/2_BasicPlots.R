@@ -24,4 +24,3 @@ hist(titanic_data_raw$Age, breaks = 8,
      xlab = "Age Range",
      ylab = "Frequency",
      col = "orange") #rgb(1,1,0))
-
