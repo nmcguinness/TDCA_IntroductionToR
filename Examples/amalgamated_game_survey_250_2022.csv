@@ -1,7 +1,7 @@
 gender,age,weekly_gaming_hrs,top_reason_gaming,gaming_platform,favourite_game,years_playing_games,less_than_money_spent_per_month,ethnicity,play_roblox,use_steam
 male,23,6,increase coordination,VR,rhythm,12,1000,other,Yes,Yes
 female,24,6,winning,VR,stealth,12,150,white,No,Yes
-male,22,6,team-work,VR,shooter,12,150,other,No,Yes
+male,32,6,team-work,VR,shooter,12,150,other,No,Yes
 prefer not to say,22,7,team-building,VR,MMORPG,13,50,other,No,Yes
 prefer not to say,24,6,increase coordination,Handheld,shooter,12,250,other,Yes,No
 female,23,6,winning,Handheld,strategy,11,500,asian,Yes,No
@@ -19,7 +19,7 @@ other,23,5,increase intelligence,VR,rhythm,12,50,white,No,No
 female,22,6,winning,XBox,sports,13,250,white,No,Yes
 male,24,6,rehabilitation,PC,simulation,12,200,white,No,Yes
 female,24,7,winning,Handheld,shooter,12,50,white,Yes,No
-female,23,7,relaxing,VR,MMORPG,12,500,white,Yes,No
+female,29,7,relaxing,VR,MMORPG,12,500,white,Yes,No
 female,22,7,build social skills,PS,sports,11,500,white,No,Yes
 male,24,6,increase intelligence,PS,adventure,13,150,black,Yes,No
 male,23,6,rehabilitation,VR,sports,13,500,white,No,Yes
@@ -230,7 +230,7 @@ other,21,6,rehabilitation,PC,shooter,13,250,black,No,No
 other,23,6,team-building,VR,stealth,12,250,other,No,Yes
 other,25,7,increase coordination,PC,shooter,12,500,other,No,No
 female,24,5,team-work,PC,racing,13,50,white,No,Yes
-male,25,7,team-building,Handheld,MMORPG,12,150,white,No,Yes
+male,33,7,team-building,Handheld,MMORPG,12,150,white,No,Yes
 female,25,6,achievements,PS,shooter,13,200,black,Yes,Yes
 male,24,5,build social skills,Handheld,stealth,13,150,asian,No,No
 other,23,6,increase coordination,Handheld,rhythm,11,200,white,No,No
@@ -243,7 +243,7 @@ female,23,5,winning,PS,sports,12,250,white,No,Yes
 female,23,6,build social skills,PC,role-playing,11,200,white,Yes,No
 female,26,7,winning,Handheld,shooter,11,1000,white,No,Yes
 female,25,6,build social skills,VR,sports,13,200,white,Yes,Yes
-female,22,7,meeting friends,PC,sports,11,50,mixed,Yes,Yes
+female,27,7,meeting friends,PC,sports,11,50,mixed,Yes,Yes
 male,24,6,meeting friends,XBox,racing,11,500,asian,No,No
 female,24,6,team-work,PC,shooter,14,50,white,No,No
 male,23,6,team-work,PC,casual,13,500,black,No,Yes

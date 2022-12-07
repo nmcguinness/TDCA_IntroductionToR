@@ -16,7 +16,6 @@ pie(x = sunshinePerDay,
    )
 
 # histogram from external CSV data ##########################################
-
 # IMPORTANT - to run this example we must set the Session Directory - to set this click on Session/Set Working Directory/To Source File Location in the main menu above
 titanic_data_raw <- read.csv("titanic.csv")
 hist(titanic_data_raw$Age, breaks = 8,
@@ -24,3 +23,55 @@ hist(titanic_data_raw$Age, breaks = 8,
      xlab = "Age Range",
      ylab = "Frequency",
      col = "orange") #rgb(1,1,0))
+
+# histogram from external CSV data ##########################################
+# IMPORTANT - to run this example we must set the Session Directory - to set this click on Session/Set Working Directory/To Source File Location in the main menu above
+
+# load library for View() function to show a nice table
+library(readr)
+
+# load the data
+gamer_survey_data <- read.csv("amalgamated_game_survey_250_2022.csv")
+gamer_survey_data
+
+# view the first, last, and table of data
+#head(gamer_survey_data, 2)
+#tail(gamer_survey_data, 20)
+# View(gamer_survey_data)
+
+# generate a histogram 
+hist(gamer_survey_data$age,
+     main = "This is the title",
+     xlab = "Age(years)",
+     ylab = "Freq",
+     col = "steelblue",
+     breaks = 8)
+
+# generate a boxplot 
+boxplot(gamer_survey_data$age,
+        main = "This is the other title",
+        ylab = "Age(years)",
+        xlab = "All Participants",
+        col = "steelblue")
+
+# generate a boxplot across multiple facets
+boxplot(gamer_survey_data$age~gamer_survey_data$gender,
+        main = "This is the other title",
+        ylab = "Age(years)",
+        xlab = "Gender",
+        col = "steelblue",
+        ylim = c(18, 50))
+
+# generate a boxplot across multiple facets
+boxplot(iris$Sepal.Width~iris$Species,
+        col=c("red", "coral", "blue"))
+
+# generate a barplot and sort
+barplot(sort(table(gamer_survey_data$gender), decreasing = FALSE))
+
+
+
+
+
+
+

@@ -115,7 +115,7 @@ median_satisfaction
 This average of the data is `r round(avg_satisfaction, 2)` satisfaction points.
 
 
-## What can we plot with R Studio?
+# What can we plot with R Studio?
 
 Well, we can generate plots really quickly from CSV file, or from remote RBDMS data, or from CSV file on web page.
 
@@ -154,7 +154,7 @@ Multiple box plots...
 boxplot(gamer_survey_data$age~gamer_survey_data$gender, main = "My multi-boxplot title")
 ```
 
-## Can we make tables of our data?
+# Can we make tables of our data?
 
 ```{r}
 # show a "prettier" paged table
