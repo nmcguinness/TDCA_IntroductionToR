@@ -3,17 +3,17 @@ title: "Terminology in Statistics"
 author: "Niall McGuinness"
 date: "2022-11-30"
 output:
+  word_document:
+    toc: TRUE
   html_document:
     toc: TRUE
-    number_sections: FALSE
+    number_sections: TRUE
     toc_float: TRUE
     df_print: paged
     fig_caption: TRUE
     code_folding: hide
     theme: cerulean
   pdf_document:
-    toc: TRUE
-  word_document:
     toc: TRUE
 ---
 

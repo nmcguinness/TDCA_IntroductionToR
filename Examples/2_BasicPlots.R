@@ -18,6 +18,10 @@ pie(x = sunshinePerDay,
 # histogram from external CSV data ##########################################
 # IMPORTANT - to run this example we must set the Session Directory - to set this click on Session/Set Working Directory/To Source File Location in the main menu above
 titanic_data_raw <- read.csv("titanic.csv")
+
+View(titanic_data_raw)
+
+
 hist(titanic_data_raw$Age, breaks = 8,
      main = "Age Breakdown",
      xlab = "Age Range",
@@ -59,15 +63,17 @@ boxplot(gamer_survey_data$age~gamer_survey_data$gender,
         main = "This is the other title",
         ylab = "Age(years)",
         xlab = "Gender",
-        col = "steelblue",
-        ylim = c(18, 50))
+        col = c("red", "coral", "blue", "orange"),
+        ylim = c(18, 40))
 
 # generate a boxplot across multiple facets
 boxplot(iris$Sepal.Width~iris$Species,
         col=c("red", "coral", "blue"))
 
 # generate a barplot and sort
-barplot(sort(table(gamer_survey_data$gender), decreasing = FALSE))
+barplot(sort(table(gamer_survey_data$gender), decreasing = FALSE),
+        main = "This is the other title",
+        ylim = c(0, 80))
 
 
 
